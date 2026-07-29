@@ -24,6 +24,13 @@ a { color: var(--blue); text-decoration: none; }
 a:hover { color: var(--blue-dark); }
 .nav-link { font-family: var(--font-body); font-weight: 600; font-size: 14px; letter-spacing: 0.04em; color: var(--ink); padding: 10px 4px; border-bottom: 3px solid transparent; text-transform: uppercase; }
 .nav-link:hover { color: var(--blue); border-bottom: 3px solid var(--blue); }
+.nav-item { position: relative; display: flex; align-items: center; }
+.nav-parent { cursor: default; }
+.nav-item:hover .nav-parent { color: var(--blue); border-bottom: 3px solid var(--blue); }
+.nav-dropdown { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); min-width: 260px; background: #ffffff; border-radius: var(--radius-card); box-shadow: 0 8px 24px rgba(0,0,0,0.16); padding: 8px 0; flex-direction: column; }
+.nav-item:hover .nav-dropdown { display: flex; }
+.nav-sublink { font-family: var(--font-body); font-weight: 600; font-size: 13.5px; color: var(--ink); padding: 10px 20px; white-space: nowrap; }
+.nav-sublink:hover { background: var(--blue); color: #ffffff; }
 .cta-btn { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(180deg, #fbb040, var(--orange)); color: var(--white); font-family: var(--font-body); font-weight: 800; font-size: 15px; letter-spacing: 0.06em; text-transform: uppercase; padding: 14px 32px; border-radius: 999px; box-shadow: 0 3px 10px rgba(0,0,0,0.25); }
 .cta-btn:hover { background: linear-gradient(180deg, var(--orange), var(--orange-dark)); color: var(--white); }
 .hero-carousel { position: relative; overflow: hidden; height: 440px; }
