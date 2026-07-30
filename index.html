@@ -27,7 +27,20 @@
       <a class="nav-link" href="#gallery">Gallery</a>
       <a class="nav-link" href="#contact">Contact Us</a>
     </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
   </header>
+  <nav class="mobile-nav" id="mobileNav">
+    <a class="mobile-nav-link" href="#home">Home</a>
+    <a class="mobile-nav-link" href="#services">Service</a>
+    <span class="mobile-nav-label">About Us</span>
+    <a class="mobile-nav-sublink" href="#about">Who We Are</a>
+    <a class="mobile-nav-sublink" href="#expert">The Expert Concrete Advantage</a>
+    <a class="mobile-nav-sublink" href="#whywork">Why Work with Us</a>
+    <a class="mobile-nav-link" href="#gallery">Gallery</a>
+    <a class="mobile-nav-link" href="#contact">Contact Us</a>
+  </nav>
 
   <!-- 01 HOME -->
   <section id="home" style="background: var(--page); padding-top: 68px;">
@@ -35,10 +48,9 @@
       <div style="flex: 0 1 260px; min-width: 200px;">
         <img src="assets/images/logo.png" alt="Pallotta Pavers &amp; Concrete LLC — Built upon The Rock" style="width: 100%; max-width: 260px; height: auto; display: block;">
       </div>
-      <div style="flex: 1 1 420px; min-width: 300px;">
-        <h1 style="font-family: var(--font-body); font-weight: 500; font-size: clamp(36px, 4.6vw, 56px); line-height: 1.12; margin: 0; color: var(--ink); text-wrap: pretty; text-align: right;">Where strong foundations<br>meet durable designs</h1>
-      </div>
-      <div style="display: flex; flex-direction: column; gap: var(--space-3); flex: none;">
+      <div class="hero-text-social" style="flex: 1 1 420px; min-width: 300px; display: flex; align-items: center; justify-content: flex-end; gap: var(--space-5); flex-wrap: wrap;">
+      <h1 style="font-family: var(--font-body); font-weight: 500; font-size: clamp(36px, 4.6vw, 56px); line-height: 1.12; margin: 0; color: var(--ink); text-wrap: pretty; text-align: right; flex: 1 1 260px;">Where strong foundations<br>meet durable designs</h1>
+      <div class="hero-social" style="display: flex; flex-direction: column; gap: var(--space-3); flex: none;">
         <a href="https://www.facebook.com/pallottapaversandconcretellc" target="_blank" rel="noopener" aria-label="Facebook" style="width: 44px; height: 44px; border-radius: 12px; background: #1877f2; display: flex; align-items: center; justify-content: center;">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
         </a>
@@ -48,6 +60,7 @@
         <a href="https://www.youtube.com/@pallottapaversandconcretellc" target="_blank" rel="noopener" aria-label="YouTube" style="width: 44px; height: 44px; border-radius: 12px; background: #ff0000; display: flex; align-items: center; justify-content: center;">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="#ffffff" stroke="none"><path d="M12 5s-4.6 0-7.5.3c-.5.1-1.4.1-2.1 1-.6.7-.9 2.2-.9 2.2S1.2 10.3 1.2 12v1.9c0 1.8.3 3.6.3 3.6s.2 1.5.9 2.2c.7.9 1.7.8 2.2.9 1.6.2 7.4.3 7.4.3s4.6 0 7.5-.3c.5-.1 1.4-.1 2.1-1 .6-.7.9-2.2.9-2.2s.3-1.8.3-3.6V12c0-1.8-.3-3.6-.3-3.6s-.2-1.5-.9-2.2c-.7-.9-1.6-.9-2.1-1C17 5 12 5 12 5zm-2.2 4.1l5.7 3-5.7 3v-6z"/></svg>
         </a>
+      </div>
       </div>
     </div>
     <div class="hero-carousel" id="heroCarousel">
