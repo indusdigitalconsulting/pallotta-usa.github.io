@@ -304,16 +304,16 @@
             <input type="hidden" name="subject" value="New quote request from pallottausa.com">
             <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
             <div class="form-row">
-              <label class="form-label" for="qf-name">Name</label>
+              <label class="form-label" for="qf-name">Name <span style="color: var(--orange);">*</span></label>
               <input class="form-input" type="text" id="qf-name" name="name" required>
             </div>
             <div class="form-row">
-              <label class="form-label" for="qf-phone">Phone</label>
+              <label class="form-label" for="qf-phone">Phone <span style="color: var(--orange);">*</span></label>
               <input class="form-input" type="tel" id="qf-phone" name="phone" required>
             </div>
             <div class="form-row">
               <label class="form-label" for="qf-email">Email</label>
-              <input class="form-input" type="email" id="qf-email" name="email" required>
+              <input class="form-input" type="email" id="qf-email" name="email">
             </div>
             <div class="form-row">
               <label class="form-label" for="qf-service">Service needed</label>
@@ -343,8 +343,9 @@
               </select>
             </div>
             <div class="form-row">
-              <label class="form-label" for="qf-area">Service area</label>
-              <select class="form-input" id="qf-area" name="area">
+              <label class="form-label" for="qf-area">Service area <span style="color: var(--orange);">*</span></label>
+              <select class="form-input" id="qf-area" name="area" required>
+                <option value="">Select an area</option>
                 <option>Pasco County</option>
                 <option>Northern Hillsborough County</option>
                 <option>San Antonio</option>
@@ -363,6 +364,7 @@
               <label class="form-label" for="qf-message">Project details</label>
               <textarea class="form-input" id="qf-message" name="message" rows="4"></textarea>
             </div>
+            <div style="font-size: 13px; color: var(--muted);"><span style="color: var(--orange);">*</span> &ndash; mandatory</div>
             <button class="cta-btn" type="submit" style="border: none; cursor: pointer; margin-top: var(--space-3);">Request a Quote</button>
           </form>
         </div>
