@@ -33,7 +33,7 @@ a:hover { color: var(--blue-dark); }
 .nav-sublink:hover { background: var(--blue); color: #ffffff; }
 .cta-btn { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(180deg, #fbb040, var(--orange)); color: var(--white); font-family: var(--font-body); font-weight: 800; font-size: 15px; letter-spacing: 0.06em; text-transform: uppercase; padding: 14px 32px; border-radius: 999px; box-shadow: 0 3px 10px rgba(0,0,0,0.25); }
 .cta-btn:hover { background: linear-gradient(180deg, var(--orange), var(--orange-dark)); color: var(--white); }
-.leaflet-tooltip.area-label { background: #ffffff; border: none; box-shadow: 0 1px 4px rgba(0,0,0,0.25); color: var(--dark); font-family: var(--font-body); font-size: 10.5px; font-weight: 700; padding: 2px 6px; border-radius: 4px; white-space: nowrap; }
+.leaflet-tooltip.area-label { background: var(--blue); border: none; box-shadow: 0 1px 6px rgba(0,0,0,0.3); color: #ffffff; font-family: var(--font-body); font-size: 11.5px; font-weight: 700; padding: 3px 8px; border-radius: 4px; white-space: nowrap; }
 .leaflet-tooltip.area-label::before { display: none; }
 .quote-form { display: flex; flex-direction: column; gap: var(--space-4); }
 .form-row { display: flex; flex-direction: column; gap: 6px; }
