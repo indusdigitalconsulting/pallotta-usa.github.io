@@ -33,6 +33,14 @@ a:hover { color: var(--blue-dark); }
 .nav-sublink:hover { background: var(--blue); color: #ffffff; }
 .cta-btn { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(180deg, #fbb040, var(--orange)); color: var(--white); font-family: var(--font-body); font-weight: 800; font-size: 15px; letter-spacing: 0.06em; text-transform: uppercase; padding: 14px 32px; border-radius: 999px; box-shadow: 0 3px 10px rgba(0,0,0,0.25); }
 .cta-btn:hover { background: linear-gradient(180deg, var(--orange), var(--orange-dark)); color: var(--white); }
+.quote-form { display: flex; flex-direction: column; gap: var(--space-4); }
+.form-row { display: flex; flex-direction: column; gap: 6px; }
+.form-label { font-size: 13px; color: var(--muted); letter-spacing: 0.02em; }
+.form-input { font-family: var(--font-body); font-size: 15px; color: var(--white); background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.22); border-radius: var(--radius-card); padding: 11px 14px; width: 100%; box-sizing: border-box; }
+.form-input:focus { outline: 2px solid var(--orange); outline-offset: 1px; border-color: transparent; }
+.form-input option { color: var(--dark); }
+.form-input optgroup { color: var(--dark); font-weight: 700; }
+textarea.form-input { resize: vertical; }
 .hero-carousel { position: relative; overflow: hidden; height: 440px; }
 .hero-carousel-item { position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 1.2s ease-in-out; }
 .hero-carousel-item.active { opacity: 1; z-index: 10; }
