@@ -8,6 +8,36 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  var lb = document.getElementById('lightbox');
+  if (lb) {
+    var tiles = Array.prototype.slice.call(document.querySelectorAll('.gallery-tile'));
+    var lbImg = document.getElementById('lbImg');
+    var lbCap = document.getElementById('lbCaption');
+    var lbCount = document.getElementById('lbCount');
+    var cur = 0;
+    function render() {
+      var t = tiles[cur];
+      lbImg.src = t.getAttribute('data-src');
+      lbImg.alt = t.getAttribute('data-caption') || '';
+      lbCap.textContent = t.getAttribute('data-caption') || '';
+      lbCount.textContent = (cur + 1) + ' / ' + tiles.length;
+    }
+    function open(i) { cur = i; render(); lb.classList.add('open'); lb.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; }
+    function close() { lb.classList.remove('open'); lb.setAttribute('aria-hidden', 'true'); document.body.style.overflow = ''; }
+    function step(d) { cur = (cur + d + tiles.length) % tiles.length; render(); }
+    tiles.forEach(function (t, i) { t.addEventListener('click', function () { open(i); }); });
+    document.getElementById('lbClose').addEventListener('click', close);
+    document.getElementById('lbPrev').addEventListener('click', function (e) { e.stopPropagation(); step(-1); });
+    document.getElementById('lbNext').addEventListener('click', function (e) { e.stopPropagation(); step(1); });
+    lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
+    document.addEventListener('keydown', function (e) {
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'Escape') close();
+      else if (e.key === 'ArrowLeft') step(-1);
+      else if (e.key === 'ArrowRight') step(1);
+    });
+  }
+
   var mapEl = document.getElementById('serviceMap');
   if (mapEl && window.L) {
     var areas = [
@@ -17,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
       { n: 'Zephyrhills', lat: 28.2336, lng: -82.1812, r: 8000, d: 'right', o: [8, -12] },
       { n: 'Dade City', lat: 28.3647, lng: -82.1959, r: 7000, d: 'top', o: [0, -28] },
       { n: "Land O' Lakes", lat: 28.2189, lng: -82.4590, r: 9000, d: 'right', o: [10, -12] },
-      { n: 'Wesley Chapel', lat: 28.2397, lng: -82.3279, r: 9000, d: 'top', o: [0, -28] },
+      { n: 'Wesley Chapel', lat: 28.2397, lng: -82.3279, r: 9000, d: 'bottom', o: [0, 4] },
       { n: 'Spring Hill', lat: 28.4769, lng: -82.5254, r: 11000, d: 'left', o: [-10, -12] },
       { n: 'Brooksville', lat: 28.5553, lng: -82.3879, r: 8000, d: 'right', o: [8, -12] },
       { n: 'Lutz', lat: 28.1511, lng: -82.4615, r: 7000, d: 'bottom', o: [0, 4] },
